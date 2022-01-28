@@ -17,6 +17,9 @@
 $(function(){
 	// 해당 버튼을 눌렀을때 ajax메서드를 호출한다.
     $('#btnBoard').click(function(){
+    	// 리스트를 요청했을때 loading이미지를 보임처리 한다.
+    	$('#loading').show();
+    	
         $.ajax({
             type : 'get',						// 전송방식
             url : '../restapi/boardList.do',	// 요청URL
@@ -49,6 +52,10 @@ function sucCallBack(resData){
     });
     // 해당 엘리먼트에 새로운 내용으로 교체한다.
     $('#show_data').html(tableData);
+    
+    // 요청이 완료되어 콜백되면 숨김처리 한다.
+    $('#loading').hide();
+//  $('#loading').hide(500);	// 0.5초
 }
 // 요청에 실패했을때 호출되는 콜백함수
 function errCallBack(errData){
@@ -66,6 +73,11 @@ function errCallBack(errData){
             <th>아이디</th>
             <th>작성일</th>
             <th>조회수</th>
+        </tr>
+        <tr id="loading" style="display: none;">
+        	<td colspan="5" align="center">
+        		<img src="../resources/loading02.gif" />
+        	</td>
         </tr>
         <tbody id="show_data"></tbody>
     </table>

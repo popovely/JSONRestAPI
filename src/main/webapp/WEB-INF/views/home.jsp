@@ -14,6 +14,8 @@
 		</a>
 	</li>
 	
+	
+	
 	<h2>RestAPI 만들어보기</h2>
 	<li>
 		<a href="./restapi/boardList.do?nowPage=1" target="_blank">
@@ -31,6 +33,8 @@
 		</a>
 	</li>
 	
+	
+	
 	<h2>Ajax와 연동하기</h2>
 	<!-- jsp파일 자체를 실행 -->
 	<li>
@@ -41,6 +45,23 @@
 	<li>
 		<a href="./ajax/boardView.jsp" target="_blank">
 			내용보기
+		</a>
+	</li>
+	
+	
+	
+	<h2>회원리스트 JSON으로 출력하기</h2>
+	<li>
+		<a href="./android/memberObject.do" target="_blank">
+			회원리스트 가져오기 (객체형태)
+		</a>
+		<br />
+		<a href="./android/memberList.do" target="_blank">
+			회원리스트 가져오기 (배열형태)
+		</a>
+		<br />
+		<a href="./android/memberLogin.do?id=kosmo&pass=1111" target="_blank">
+			회원로그인 하기 (객체형태)
 		</a>
 	</li>
 </body>
