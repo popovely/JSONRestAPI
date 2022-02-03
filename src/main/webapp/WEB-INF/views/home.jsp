@@ -32,6 +32,11 @@
 			내용보기
 		</a>
 	</li>
+	<li>
+		<a href="./restapi/boardWrite.do?title=RestAPI로 작성하기&content=내용&id=test1" target="_blank">
+			글작성하기
+		</a>
+	</li>
 	
 	
 	
@@ -55,11 +60,13 @@
 		<a href="./android/memberObject.do" target="_blank">
 			회원리스트 가져오기 (객체형태)
 		</a>
-		<br />
+	</li>
+	<li>
 		<a href="./android/memberList.do" target="_blank">
 			회원리스트 가져오기 (배열형태)
 		</a>
-		<br />
+	</li>
+	<li>
 		<a href="./android/memberLogin.do?id=kosmo&pass=1111" target="_blank">
 			회원로그인 하기 (객체형태)
 		</a>

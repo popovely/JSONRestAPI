@@ -56,8 +56,20 @@
 	
 	
 	
-	<!-- 상세보기 -->
+	<!-- 게시물 내용보기 -->
 	<select id="view" resultType="mybatis.BoardDTO" parameterType="mybatis.ParameterDTO">
 		SELECT * FROM board WHERE num=${num}
 	</select>
+	
+	
+	
+	<!-- 게시물 작성하기 -->
+	<!-- 
+		resultType을 명시하지 않더라도
+		성공 / 실패 두가지 경우밖에 없기때문에 항상 1 또는 0을 반환한다.
+	 -->
+	<insert id="write" parameterType="mybatis.BoardDTO">
+		INSERT INTO board (num, title, content, id, visitcount)
+			VALUES (seq_board_num.NEXTVAL, #{title}, #{content}, #{id}, 0)
+	</insert>
 </mapper>
